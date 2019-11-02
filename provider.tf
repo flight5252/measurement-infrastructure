@@ -8,7 +8,6 @@ terraform {
 
 provider "statuscake" {
   version = "1.0.0"
-  username = "flight525252gmailcom"
 }
 
 
