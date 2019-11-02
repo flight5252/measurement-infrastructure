@@ -1,5 +1,5 @@
 data "opsgenie_user" "flight-commander" {
-  username = "flight5252521@gmail.com"
+  username = "flight525252@gmail.com"
 }
 
 resource "opsgenie_user" "flight-attendent" {
