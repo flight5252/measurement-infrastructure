@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "pgr301bucket"
-    key    = "flight/terraform.tfstate"
+    key    = "devopsinthesky/terraform.tfstate"
     region = "eu-north-1"
   }
 }
