@@ -50,7 +50,7 @@ resource "opsgenie_schedule_rotation" "measurement_backend_team-schedule-rotatio
   length      = 1
 
   participant {
-    type = "user"
+    type = "admin"
     id   = "${opsgenie_user.flight-attendent.id}"
   }
 
