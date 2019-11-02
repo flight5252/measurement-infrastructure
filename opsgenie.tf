@@ -1,7 +1,5 @@
-resource "opsgenie_user" "flight-commander" {
+data "opsgenie_user" "flight-commander" {
   username = "flight525252@gmail.com"
-  full_name = "This is a fullname"
-  role = "admin"
 }
 
 resource "opsgenie_user" "flight-attendent" {
@@ -30,7 +28,7 @@ resource "opsgenie_team" "measurement_backend" {
     }
 
     member {
-        id = "${opsgenie_user.flight-commander.id}"
+        id = "${data.opsgenie_user.flight-commander.id}"
         role = "admin"
     }
 }
@@ -52,13 +50,13 @@ resource "opsgenie_schedule_rotation" "measurement_backend_team-schedule-rotatio
   length      = 1
 
   participant {
-    type = "admin"
+    type = "user"
     id   = "${opsgenie_user.flight-attendent.id}"
   }
 
   participant {
-    type = "user"
-    id   = "${opsgenie_user.flight-commander.id}"
+    type = "admin"
+    id   = "${data.opsgenie_user.flight-commander.id}"
   }
 
   time_restriction {
