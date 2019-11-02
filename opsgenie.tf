@@ -55,7 +55,7 @@ resource "opsgenie_schedule_rotation" "measurement_backend_team-schedule-rotatio
   }
 
   participant {
-    type = "admin"
+    type = "user"
     id   = "${data.opsgenie_user.flight-commander.id}"
   }
 
