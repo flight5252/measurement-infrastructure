@@ -2,7 +2,7 @@ resource "opsgenie_user" "flight-commander" {
   username = "flight525252@gmail.com"
   full_name = "Flight Commandant"
   role = "Admin"
-  local = "no_NO"
+  locale = "no_NO"
   timezone = "Europe/Oslo"
 }
 
