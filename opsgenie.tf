@@ -1,4 +1,4 @@
-data "opsgenie_user" "flight-commander" {
+resource "opsgenie_user" "flight-commander" {
   username = "flight525252@gmail.com"
 }
 
